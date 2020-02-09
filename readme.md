@@ -9,7 +9,7 @@ but no inferior traits.
 _As a note, this was a programming excercise – not a biology excercise. At best, this was a gross
 simplification of reality fueled by
 [casual reductionism](https://en.wikipedia.org/wiki/Fallacy_of_the_single_cause). At worst, it
-was an excersie no corrolation to reality at all._
+was an excersie with no corrolation to reality at all._
 
 Ultimately, this project serves to:
 
