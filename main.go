@@ -65,8 +65,8 @@ func main() {
 		//
 		if parentA.CurScore == parentA.God.CurScore {
 			printSeparator()
-			fmt.Printf("Found superior child after %d generations\n", genCount)
-			fmt.Printf("Best Child = %s\n", parentA)
+			fmt.Printf("Found best possible child after %d generations.\n", genCount)
+			fmt.Printf("Best Possible Child = %s\n", parentA)
 
 			break
 		}
