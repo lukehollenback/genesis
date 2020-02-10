@@ -136,5 +136,5 @@ func breedChild(c chan<- *creature.Creature, parentA *creature.Creature, parentB
 // printSeparator simply outputs a line to separate sections of output.
 //
 func printSeparator() {
-	fmt.Printf("--------------------------------------------------\n")
+	fmt.Printf("--------------------------------------------------------------------------------\n")
 }
