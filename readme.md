@@ -20,44 +20,38 @@ Ultimately, this project serves to:
 
 ## Example Output
 
-```
+```bash
 $ go run .
 --------------------------------------------------------------------------------
-God  = 10101100110011110001110111001110 (score = 32)
-Adam = 01110101000011111001110000010110 (score = 19)
-Eve  = 00101111001010010111001001110000 (score = 12)
+God  = 00100110011111110011001010110011 (score = 32)
+Adam = 11101100110100100010000100011101 (score = 15)
+Eve  = 01111011111111101001101010000001 (score = 19)
 --------------------------------------------------------------------------------
-Breeding next generation (1) (of 495 children)...
-  ↝        Best Child = 00100100000011011001010101000110 (score = 23)
-  ↝ Second Best Child = 00101100000011011000110000000110 (score = 22)
+Breeding next generation (1) (of 534 children)...
+  ↝        Best Child = 11110100011101100011101000110001 (score = 23)
+  ↝ Second Best Child = 11101111000111110011001010011001 (score = 23)
 ...Finished.
 --------------------------------------------------------------------------------
-Breeding next generation (2) (of 642 children)...
-  ↝        Best Child = 00101100000011010001010101001100 (score = 25)
-  ↝ Second Best Child = 00001100000011010001110101000110 (score = 25)
-...Finished.
-```
-
-...
-
-
-```
---------------------------------------------------------------------------------
-Breeding next generation (8) (of 963 children)...
-  ↝        Best Child = 10101000110011110001110111001110 (score = 31)
-  ↝ Second Best Child = 10001100110011110001110101001110 (score = 30)
+Breeding next generation (2) (of 12 children)...
+  ↝        Best Child = 00110110000111010001101010010001 (score = 24)
+  ↝ Second Best Child = 11101001011111110011101010111001 (score = 23)
 ...Finished.
 --------------------------------------------------------------------------------
-Breeding next generation (9) (of 157 children)...
-  ↝        Best Child = 10101100010011110001110111000110 (score = 30)
-  ↝ Second Best Child = 10001100110011110001110101001110 (score = 30)
+Breeding next generation (3) (of 96 children)...
+  ↝        Best Child = 10100010001101110011001010110011 (score = 28)
+  ↝ Second Best Child = 10100110011111010011101010110001 (score = 28)
 ...Finished.
 --------------------------------------------------------------------------------
-Breeding next generation (10) (of 254 children)...
-  ↝        Best Child = 10101100110011110001110111001110 (score = 32)
-  ↝ Second Best Child = 10101100110011110001110111101110 (score = 31)
+Breeding next generation (4) (of 337 children)...
+  ↝        Best Child = 00100010011111110011001010110001 (score = 30)
+  ↝ Second Best Child = 00100110011100110011001010110011 (score = 30)
 ...Finished.
 --------------------------------------------------------------------------------
-Found best possible child after 10 generations.
-Best Possible Child = 10101100110011110001110111001110 (score = 32)
+Breeding next generation (5) (of 756 children)...
+  ↝        Best Child = 00100110011111110011001010110011 (score = 32)
+  ↝ Second Best Child = 00100110011101110011001010110011 (score = 31)
+...Finished.
+--------------------------------------------------------------------------------
+Found best possible child after 5 generations.
+Best Possible Child = 00100110011111110011001010110011 (score = 32)
 ```
