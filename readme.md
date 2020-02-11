@@ -2,10 +2,10 @@
 
 ![Status: In Development](https://img.shields.io/badge/Status-In%20Development-blue.svg)
 
-A simple [genetic algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) writting in Go.
+A simple [genetic/evolutionary algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) written in Go.
 
 Simulates the evolution of generations of creatures with varying traits through breeding,
-mutation, and natural selection. The end goal is a creature that has *all* known superior traits,
+mutation, and natural selection. The end goal is that a creature which has *all* known superior traits,
 and *no* known inferior traits, is bred.
 
 _As a note, this was a programming excercise – not a biology excercise. At best, this was a gross
