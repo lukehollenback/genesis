@@ -76,8 +76,6 @@ func (creature *Creature) String() string {
 // Breed creates and scores a new child by mating the Creature with the provided Partner.
 //
 func (creature *Creature) Breed(partner *Creature) *Creature {
-	// TODO: Check that both god's are the same.
-
 	//
 	// Actually combine the two Creatures.
 	//

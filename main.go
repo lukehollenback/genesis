@@ -11,6 +11,7 @@ import (
 
 const maxChildrenPerGeneration = 1000
 const mutationProbability = 75
+const naturalSelectionProbability = 50
 
 func main() {
 	//
@@ -84,6 +85,24 @@ func main() {
 //
 func breedGeneration(parentA *creature.Creature, parentB *creature.Creature, childCount int) (bestChild *creature.Creature, secondBestChild *creature.Creature) {
 	//
+	// Decide if we are going to perform naturally selection.
+	//
+	// NOTE: To make our logic below simple, we just use a blank "bad gene mask" if natural selection
+	//  is turned off for this generation.
+	//
+	var badGeneMask uint32
+
+	if rand.Intn(100) <= naturalSelectionProbability {
+		badGenLoc := rand.Intn(31)
+
+		badGeneMask = (0x00000001 << badGenLoc)
+
+		fmt.Printf("Naturally selecting with bad gene mask = %032b...\n", badGeneMask)
+	} else {
+		badGeneMask = 0x00000000
+	}
+
+	//
 	// Spin off goroutines for each child that needs to be bred.
 	//
 	childChannel := make(chan *creature.Creature, childCount)
@@ -94,18 +113,36 @@ func breedGeneration(parentA *creature.Creature, parentB *creature.Creature, chi
 
 	//
 	// Wait for all of the goroutines to join back and recieve all of the children that they generate.
+	// As we recieve them, perform natural selection to see if they will "die off" or if they will
+	// survive.
 	//
 	children := make([]*creature.Creature, childCount)
 
 	for i := 0; i < childCount; i++ {
-		children[i] = <-childChannel
+		child := <-childChannel
+
+		if (child.Genotype & badGeneMask) == 0 {
+			children[i] = child
+		}
 	}
 
 	//
 	// Sort the recieved children and return the best ones.
 	//
+	// NOTE: We assume a score of 0 for "dead" children.
+	//
 	sort.SliceStable(children, func(i, j int) bool {
-		return (children[i].CurScore > children[j].CurScore)
+		var iScore, jScore int = 0, 0
+
+		if children[i] != nil {
+			iScore = children[i].CurScore
+		}
+
+		if children[j] != nil {
+			jScore = children[j].CurScore
+		}
+
+		return (iScore > jScore)
 	})
 
 	return children[0], children[1]
