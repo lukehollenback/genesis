@@ -31,7 +31,7 @@ type Creature struct {
 // CreateCreature creates and scores a new Creature structure with a random genotype.
 //
 func CreateCreature(god *Creature) *Creature {
-	var creature Creature = Creature {
+	creature := Creature {
 		Genotype: rand.Uint32(),
 		God: god,
 	}
@@ -45,7 +45,7 @@ func CreateCreature(god *Creature) *Creature {
 // CreateCreatureWithGenotype creates and scores a new Creature structure with a specified genotype.
 //
 func CreateCreatureWithGenotype(genotype uint32, god *Creature) *Creature {
-	var creature Creature = Creature {
+	creature := Creature {
 		Genotype: genotype,
 		God: god,
 	}
@@ -59,7 +59,7 @@ func CreateCreatureWithGenotype(genotype uint32, god *Creature) *Creature {
 // CreateGodCreature creates and scores a new "God Creature" structure with a random genotype.
 //
 func CreateGodCreature() *Creature {
-	var creature Creature = Creature {
+	creature := Creature {
 		Genotype: rand.Uint32(),
 	}
 
