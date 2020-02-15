@@ -1,6 +1,6 @@
 # Genesis
 
-![Status: In Development](https://img.shields.io/badge/Status-In%20Development-blue.svg)
+![Status: Complete](https://img.shields.io/badge/Status-Complete-green.svg)
 
 A simple [genetic/evolutionary algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm) written in Go.
 
@@ -33,6 +33,7 @@ Breeding next generation (1) (of 534 children)...
 ...Finished.
 --------------------------------------------------------------------------------
 Breeding next generation (2) (of 12 children)...
+Naturally selecting with bad gene mask = 00100000000000000000000000000000...
   ↝        Best Child = 00110110000111010001101010010001 (score = 24)
   ↝ Second Best Child = 11101001011111110011101010111001 (score = 23)
 ...Finished.
@@ -48,6 +49,7 @@ Breeding next generation (4) (of 337 children)...
 ...Finished.
 --------------------------------------------------------------------------------
 Breeding next generation (5) (of 756 children)...
+Naturally selecting with bad gene mask = 00100000000000000000000000000000...
   ↝        Best Child = 00100110011111110011001010110011 (score = 32)
   ↝ Second Best Child = 00100110011101110011001010110011 (score = 31)
 ...Finished.
